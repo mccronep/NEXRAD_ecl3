@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# This script is a "wrapper" shell script to facilitate running the est_comms_link.py
+# Python script from the RPG scripts directory.
+#
+#
+# est_comms_link3_sb_v1.py is Python 3 only with subpro changes.
+#
+if grep -q "7.9" /etc/redhat-release ; then
+        echo 'RHEL7'
+        /usr/bin/python3 /home/pmccrone/python/src/ecl/est_comms_link3_sb_v2.py $*
+else
+        echo 'RHEL8 or higher'
+        /usr/bin/python3 /home/pmccrone/python/src/ecl/est_comms_link3_sb_v2.py $*
+fi
+
+
