@@ -1,0 +1,32 @@
+cd /import/apps/scastleberry/Scripts/RPG/cpc102.tsk060
+[pmccrone@lnx064 cpc102.tsk060]$ ./nbtcp -i
+Invalid link number entered (arg: -i)
+
+Usage: ./nbtcp [options] orpg_host | link number
+      options:
+         -A Add WMO/AWIPS header (dft = do not add)
+         -C Country of Origin for use in the WMO/AWIPS header (dft = US)
+         -R Remove products from directory older than X minutes (dft = 0 (Never))
+         -P Purge directory at startup (dft = No)
+         -d Directory where product files are written
+         -D Same as "-d" except any files in directory will be deleted
+         -p Orpg port number (dft = 4491)
+         -s Site_id ID of the product data (dft = KCRI)
+         -t Test flag used to set 1 second delay between socket reads (dft = not set)
+         -u User id (dft = 454)
+         -w Orpg logon password (dft = passwd)
+         -c Make script-based Class 2 one time request via WAN (no RPS list)
+         -o Make interactive Class 2 one time requests via WAN (no RPS list)
+            -j Class 2 User password (dft = )
+            -l Class 2 Port password (dft = )
+            -r Class 2 Request repeat interval in minutes, (dft = 6)
+         -i If -d used, will not store products with codes < 16 (dft = Do Not Ignore)
+         -b Make nbtcp go to background ... only works with TCP and native interface
+         -h Help, these messages
+
+The last argument can either be a hostname/IP address, or a link
+number referenced in the comms_link.conf file. If a link number
+is entered (range of 0-99), the tool will use cm_tcp to perform
+the communications services; otherwise, the tool will use its
+native interface to perform the communications services
+

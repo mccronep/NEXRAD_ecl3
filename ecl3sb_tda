@@ -12,10 +12,10 @@
 
 if grep -q "7.9" /etc/redhat-release ; then
         echo 'RHEL7'
-        /usr/bin/python3 /home/pmccrone/python/src/ecl/est_comms_link3_sb_v2t.py $*
+        /usr/bin/python3 /home/pmccrone/python/src/ecl/est_comms_link3_sb_tda.py $*
 else
         echo 'RHEL8 or higher'
-        /usr/bin/python3 /home/pmccrone/python/src/ecl/est_comms_link3_sb_v2t.py $*
+        /usr/bin/python3 /home/pmccrone/python/src/ecl/est_comms_link3_sb_tda.py $*
 fi
 
 

@@ -1,0 +1,4 @@
+Thu Sep 14 16:32:23 2023  Program started, connecting to  rpga1
+Thu Sep 14 16:32:23 2023  Could not resolve  rpga1, in hosts table?
+Thu Sep 14 16:32:23 2023
+  CreateSocket() pvc0 failed (err: Success), aborting execution
